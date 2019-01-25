@@ -1,0 +1,7 @@
+SELECT gene_name, (seq_region_end-seq_region_start+1) as "Size" FROM bioinf_examen.gene order by Size asc limit 1;
+
+# gene_name, Size
+'TRDD1', '8'
+
+
+

@@ -1,0 +1,12 @@
+SELECT count(exon_id) as "Amount of exons in exon table" FROM bioinf_examen.exon;
+
+# Amount of exons in exon table
+'642590'
+
+
+SELECT count(exon_id) as "Amount of exons in exon_transcript table" FROM bioinf_examen.exon_transcript;
+
+# Amount of exons in exon_transcript table
+'1178393'
+
+There are more entries in the exon_transcript table because it's a cross-reference table between exon and transcript. The same exon can be in multiple transcripts, so it's repeated many times in the exon_transcript table whereas in the exon table each exon is just shown once.

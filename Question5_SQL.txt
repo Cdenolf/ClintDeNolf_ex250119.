@@ -1,0 +1,5 @@
+SELECT gene_name, count(*) as "Amount of transcripts" FROM bioinf_examen.gene join bioinf_examen.transcript on gene.gene_id = transcript.gene_id group by gene_name order by count(*) desc limit 1;
+
+# gene_name, Amount of transcripts
+'U6', '1329'
+

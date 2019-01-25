@@ -1,0 +1,12 @@
+SELECT chromosome, count(*) as "Amount of genes" from bioinf_examen.gene where description like "%cancer%" group by chromosome order by count(*) desc limit 1 offset 1;
+
+# chromosome, Amount of genes
+'9', '5'
+
+
+select chromosome, count(*) as "Amount of exons" from bioinf_examen.gene join transcript on transcript.gene_id = gene.gene_id join exon_transcript on exon_transcript.transcript_id = transcript.transcript_id where chromosome = 9 group by chromosome;
+
+
+# chromosome, Amount of exons
+'9', '45679'
+
