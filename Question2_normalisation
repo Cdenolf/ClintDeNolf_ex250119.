@@ -1,0 +1,17 @@
+Keys are put in bold online (and quotes in gedit file).
+
+UNF: This is all the data grouped together.
+
+Group(PersonnelNo, Name, Date_of_birth, LabCode, LabName, ResearchCode, ResearchDescription, ResearchSupervisor)
+
+1NF: Remove repeating groups -> research code, description and supervisor
+
+Personnel("PersonnelNo", Name, Date_of_Birth, Labcode, LabName), Research("PersonnelNo", "ResearchCode", ResearchDescription, ResearchSupervisor)
+
+2NF: all non-primary attributes must be dependent on the whole key. ResearchDescription and ResearchSupervisor are only dependent on ResearchCode, so this must be split off.
+
+Personnel("PersonnelNo", Name, Date_of_Birth, Labcode, LabName), Crossref("PersonnelNo", "ResearchCode") Research ("ResearchCode", ResearchDescription, ResearchSupervisor)
+
+3NF: all non-primary attributes must be non-transitively dependent on the key. Labname is dependent on LabCode which is dependent on PersonnelNo. This is transitively dependent, so it must be split off.
+
+Personnel("PersonnelNo", Name, Date_of_Birth, Labcode), Lab("LabCode", LabName), Crossref("PersonnelNo", "ResearchCode") Research ("ResearchCode", ResearchDescription, ResearchSupervisor)
