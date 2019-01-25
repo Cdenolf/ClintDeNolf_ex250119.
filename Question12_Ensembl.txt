@@ -1,0 +1,15 @@
+I used this url form for the Ensembl REST API: GET variation/:species/:id
+
+The species is mouse (mus musculus) and the variant id is rs4224828.
+
+This is the command:
+
+$ curl 'http://rest.ensembl.org/variation/mus_musculus/rs4224828?' -H 'Content-type:application/json'
+
+The location is chromosome 4, position 136443949-136443949.
+
+I found the location in the output:
+{"ambiguity":"Y","most_severe_consequence":"3_prime_UTR_variant","synonyms":[],"ancestral_allele":null,"MAF":null,"name":"rs4224828","mappings":[{"start":136443949,"allele_string":"T/C","coord_system":"chromosome","end":136443949,"location":"4:136443949-136443949","seq_region_name":"4","strand":1,"assembly_name":"GRCm38"}],"source":"Variants (including SNPs and indels) imported from dbSNP","evidence":["Multiple_observations","Frequency"],"var_class":"SNP","minor_allele":null}
+
+
+
