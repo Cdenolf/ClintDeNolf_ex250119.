@@ -1,0 +1,6 @@
+db.getCollection('Bioinf_mongo_examen').find({method_of_admission:{$all:["TABLET;BUCCAL, SUBLINGUAL"]}},{drug:1})
+
+{
+    "_id" : ObjectId("588878f14ffaac2610855b5e"),
+    "drug" : "DEMULEN 1/35-28"
+}

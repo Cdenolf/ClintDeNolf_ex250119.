@@ -1,0 +1,19 @@
+db.getCollection('Bioinf_mongo_examen').aggregate([{$group:{_id:"$company", Average_amount_of_side_effect:{$avg:"$percentage_of_side_effects"}}},{$match:{Average_amount_of_side_effect:{$gt:10}}},{$sort:{Average_amount_of_side_effect:-1}}])
+
+/* 1 */
+{
+"_id" : "Galderma Laboratories, L.P.",
+"Average_amount_of_side_effect" : 11.5
+}
+
+/* 2 */
+{
+"_id" : "Watson Pharmaceuticals, Inc.",
+"Average_amount_of_side_effect" : 10.65
+}
+
+/* 3 */
+{
+"_id" : "Durata Therapeutics, Inc.",
+"Average_amount_of_side_effect" : 10.5
+}

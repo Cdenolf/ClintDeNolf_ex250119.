@@ -1,0 +1,401 @@
+db.getCollection('Bioinf_mongo_examen').aggregate([{$group:{_id:"$company", count:{$sum:1}, max_se:{$max:"$percentage_of_side_effects"},min_se:{$min:"$percentage_of_side_effects"}}},{$match:{count:{$gt:1}}},{$sort:{count:-1}}])
+
+/* 1 */
+{
+    "_id" : "Amherst Pharmaceuticals, LLC",
+    "count" : 43.0,
+    "max_se" : 10.0,
+    "min_se" : 3.0
+}
+
+/* 2 */
+{
+    "_id" : "Anchen Pharmaceuticals, Inc",
+    "count" : 36.0,
+    "max_se" : 11.0,
+    "min_se" : 0.0
+}
+
+/* 3 */
+{
+    "_id" : "Acusphere, Inc.",
+    "count" : 32.0,
+    "max_se" : 11.5,
+    "min_se" : 0.0
+}
+
+/* 4 */
+{
+    "_id" : "AbbVie Inc.",
+    "count" : 32.0,
+    "max_se" : 26.0,
+    "min_se" : 5.0
+}
+
+/* 5 */
+{
+    "_id" : "Daiichi Sankyo",
+    "count" : 31.0,
+    "max_se" : 12.0,
+    "min_se" : 2.5
+}
+
+/* 6 */
+{
+    "_id" : "AkPharma Inc",
+    "count" : 30.0,
+    "max_se" : 15.0,
+    "min_se" : 3.8
+}
+
+/* 7 */
+{
+    "_id" : "Advance Pharmaceutical Inc.",
+    "count" : 27.0,
+    "max_se" : 8.5,
+    "min_se" : 0.4
+}
+
+/* 8 */
+{
+    "_id" : "Aprecia Pharmaceuticals Company",
+    "count" : 24.0,
+    "max_se" : 8.0,
+    "min_se" : 0.5
+}
+
+/* 9 */
+{
+    "_id" : "Bristol-Myers Squibb Company",
+    "count" : 21.0,
+    "max_se" : 10.0,
+    "min_se" : 5.0
+}
+
+/* 10 */
+{
+    "_id" : "Arbor Pharmaceuticals, LLC",
+    "count" : 21.0,
+    "max_se" : 9.2,
+    "min_se" : 0.3
+}
+
+/* 11 */
+{
+    "_id" : "Centrix Pharmaceutical, Inc.",
+    "count" : 20.0,
+    "max_se" : 7.5,
+    "min_se" : 1.8
+}
+
+/* 12 */
+{
+    "_id" : "Allergan, Inc.",
+    "count" : 20.0,
+    "max_se" : 8.7,
+    "min_se" : 0.0
+}
+
+/* 13 */
+{
+    "_id" : "Alvogen, Inc.",
+    "count" : 18.0,
+    "max_se" : 10.0,
+    "min_se" : 0.0
+}
+
+/* 14 */
+{
+    "_id" : "Accredo Health Group, Inc.",
+    "count" : 17.0,
+    "max_se" : 8.3,
+    "min_se" : 3.5
+}
+
+/* 15 */
+{
+    "_id" : "Alcon",
+    "count" : 17.0,
+    "max_se" : 11.0,
+    "min_se" : 3.5
+}
+
+/* 16 */
+{
+    "_id" : "Acella Pharmaceuticals, LLC",
+    "count" : 16.0,
+    "max_se" : 9.5,
+    "min_se" : 5.0
+}
+
+/* 17 */
+{
+    "_id" : "OPKO Health, Inc.",
+    "count" : 15.0,
+    "max_se" : 8.0,
+    "min_se" : 4.0
+}
+
+/* 18 */
+{
+    "_id" : "Capellon Pharmaceuticals, LLC",
+    "count" : 15.0,
+    "max_se" : 9.5,
+    "min_se" : 0.0
+}
+
+/* 19 */
+{
+    "_id" : "Carlsbad Technology, Inc.",
+    "count" : 15.0,
+    "max_se" : 11.0,
+    "min_se" : 5.5
+}
+
+/* 20 */
+{
+    "_id" : "Actavis Pharma, Inc.",
+    "count" : 15.0,
+    "max_se" : 9.0,
+    "min_se" : 5.0
+}
+
+/* 21 */
+{
+    "_id" : "Cephalon, Inc.",
+    "count" : 15.0,
+    "max_se" : 7.5,
+    "min_se" : 0.25
+}
+
+/* 22 */
+{
+    "_id" : "CordenPharma International",
+    "count" : 14.0,
+    "max_se" : 6.0,
+    "min_se" : 4.0
+}
+
+/* 23 */
+{
+    "_id" : "Ascend Laboratories LLC",
+    "count" : 14.0,
+    "max_se" : 8.5,
+    "min_se" : 4.5
+}
+
+/* 24 */
+{
+    "_id" : "Global Pharmaceuticals",
+    "count" : 14.0,
+    "max_se" : 12.0,
+    "min_se" : 0.0
+}
+
+/* 25 */
+{
+    "_id" : "Advanced Life Sciences, Inc.",
+    "count" : 13.0,
+    "max_se" : 8.5,
+    "min_se" : 0.5
+}
+
+/* 26 */
+{
+    "_id" : "Chain Drug Marketing Association",
+    "count" : 13.0,
+    "max_se" : 9.0,
+    "min_se" : 6.0
+}
+
+/* 27 */
+{
+    "_id" : "EpiCept Corporation",
+    "count" : 13.0,
+    "max_se" : 5.6,
+    "min_se" : 3.5
+}
+
+/* 28 */
+{
+    "_id" : "Atley Pharmaceuticals, Inc.",
+    "count" : 12.0,
+    "max_se" : 8.0,
+    "min_se" : 3.0
+}
+
+/* 29 */
+{
+    "_id" : "Chugai Pharma USA, Inc.",
+    "count" : 12.0,
+    "max_se" : 8.0,
+    "min_se" : 0.0
+}
+
+/* 30 */
+{
+    "_id" : "Braintree Laboratories Inc.",
+    "count" : 12.0,
+    "max_se" : 8.5,
+    "min_se" : 5.5
+}
+
+/* 31 */
+{
+    "_id" : "Durata Therapeutics, Inc.",
+    "count" : 12.0,
+    "max_se" : 13.0,
+    "min_se" : 7.0
+}
+
+/* 32 */
+{
+    "_id" : "Hemispherx Biopharma, Inc.",
+    "count" : 11.0,
+    "max_se" : 8.0,
+    "min_se" : 4.0
+}
+
+/* 33 */
+{
+    "_id" : "B.F. Ascher & Company, Inc.",
+    "count" : 11.0,
+    "max_se" : 8.5,
+    "min_se" : 5.0
+}
+
+/* 34 */
+{
+    "_id" : "Actelion Pharmaceuticals US, Inc.",
+    "count" : 11.0,
+    "max_se" : 10.0,
+    "min_se" : 6.0
+}
+
+/* 35 */
+{
+    "_id" : "Amgen Inc.",
+    "count" : 11.0,
+    "max_se" : 7.0,
+    "min_se" : 5.0
+}
+
+/* 36 */
+{
+    "_id" : "Elan Corporation, plc",
+    "count" : 11.0,
+    "max_se" : 8.5,
+    "min_se" : 5.0
+}
+
+/* 37 */
+{
+    "_id" : "Fresenius Medical Care",
+    "count" : 11.0,
+    "max_se" : 6.0,
+    "min_se" : 2.5
+}
+
+/* 38 */
+{
+    "_id" : "Aqua Pharmaceuticals LLC",
+    "count" : 11.0,
+    "max_se" : 10.0,
+    "min_se" : 4.5
+}
+
+/* 39 */
+{
+    "_id" : "Northfield Laboratories Inc.",
+    "count" : 10.0,
+    "max_se" : 9.0,
+    "min_se" : 6.5
+}
+
+/* 40 */
+{
+    "_id" : "Osiris Therapeutics, Inc.",
+    "count" : 10.0,
+    "max_se" : 12.0,
+    "min_se" : 6.0
+}
+
+/* 41 */
+{
+    "_id" : "Caraco Pharmaceutical Laboratories, Ltd.",
+    "count" : 10.0,
+    "max_se" : 9.0,
+    "min_se" : 4.4
+}
+
+/* 42 */
+{
+    "_id" : "Fibrocell Science, Inc.",
+    "count" : 10.0,
+    "max_se" : 9.0,
+    "min_se" : 4.5
+}
+
+/* 43 */
+{
+    "_id" : "AMAG Pharmaceuticals, Inc.",
+    "count" : 10.0,
+    "max_se" : 8.5,
+    "min_se" : 4.9
+}
+
+/* 44 */
+{
+    "_id" : "Andrx Pharmaceuticals",
+    "count" : 10.0,
+    "max_se" : 9.0,
+    "min_se" : 5.1
+}
+
+/* 45 */
+{
+    "_id" : "EUSA Pharma",
+    "count" : 10.0,
+    "max_se" : 8.5,
+    "min_se" : 1.5
+}
+
+/* 46 */
+{
+    "_id" : "Heritage Pharmaceuticals Inc.",
+    "count" : 10.0,
+    "max_se" : 9.0,
+    "min_se" : 5.0
+}
+
+/* 47 */
+{
+    "_id" : "Jubilant Cadista Pharmaceuticals Inc.",
+    "count" : 10.0,
+    "max_se" : 8.5,
+    "min_se" : 3.5
+}
+
+/* 48 */
+{
+    "_id" : "Aero Pharma",
+    "count" : 9.0,
+    "max_se" : 6.5,
+    "min_se" : 3.1
+}
+
+/* 49 */
+{
+    "_id" : "Biogen",
+    "count" : 9.0,
+    "max_se" : 12.0,
+    "min_se" : 5.5
+}
+
+/* 50 */
+{
+    "_id" : "CorePharma, LLC",
+    "count" : 9.0,
+    "max_se" : 9.0,
+    "min_se" : 5.5
+}
